@@ -85,21 +85,21 @@ namespace FinalProject.controller
             //select  data from database to compare data input by general user
             DataBaseConnection.connectiondatabase();
             //tring strdata = "select signup where username='" + name + "'  password='" + password + "'and usertype='" + utype + "'";
-            string strdata = "select * from general_login where username ='" + name + "'and password='" + password + "'";
+            string strdata = "select username,password from general_login where username ='" + name + "'and password='" + password + "'";
             MySqlDataAdapter da = new MySqlDataAdapter(strdata, DataBaseConnection.cn);
             DataSet ds = new DataSet();
             da.Fill(ds, "general_login");
             return ds.Tables[0];
 
         }
-        public void general_signup(string name,string password)
+        public void general_signup(string name,string password,string address)
         {
+
             try
             {
 
-
                 DataBaseConnection.connectiondatabase();
-                string str = "insert into general_login (username,password)vlaues('" + name + "'," + password + "')";
+                string str = "insert into general_login(username,password,address)values('" + name + "'," + password + "','" + address + "')";
                 MySqlCommand con = new MySqlCommand(str, DataBaseConnection.cn);
                 con.ExecuteNonQuery();
             }
@@ -107,13 +107,14 @@ namespace FinalProject.controller
             {
 
             }
+      
         }
 
         public DataTable admin_login(string name, string pass)
         {
             //select data from database to compare data with admin input
             DataBaseConnection.connectiondatabase();
-            string srt = "select username ,password from officer_login where username='" + name + "'and password='" + pass + "'";
+            string srt = "select * from officer_login where username='" + name + "'and password='" + pass + "'";
             MySqlDataAdapter dt = new MySqlDataAdapter(srt, DataBaseConnection.cn);
             DataSet ds = new DataSet();
             dt.Fill(ds, "login");

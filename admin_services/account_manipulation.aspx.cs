@@ -74,7 +74,7 @@ namespace FinalProject.admin_services
             Decimal a = 0;
             string ammount = dt.Rows[0]["ammount_digit"].ToString();
             Decimal amm = Convert.ToDecimal(ammount);
-            if (amm > a)
+            if (amm >= a)
 
             {
                 lresult.Text = "YOU HAVE TO CLEAR LOAN FIRST";

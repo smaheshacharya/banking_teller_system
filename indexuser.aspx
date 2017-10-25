@@ -49,7 +49,7 @@
       <div class="navbar-form navbar-right">
        
         <a href="login.aspx" class="btn btn-info" <span>Login</span> </a>
-          <a href="login.aspx" class="btn btn-info" <span>S/ALogin</span> </a>
+          <a href="officer_login.aspx" class="btn btn-info" <span>Admin Login</span> </a>
       </div>
      
     </div><!-- /.navbar-collapse -->

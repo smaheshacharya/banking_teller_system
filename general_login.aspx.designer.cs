@@ -10,7 +10,7 @@
 namespace FinalProject {
     
     
-    public partial class genrlal_login {
+    public partial class general_login {
         
         /// <summary>
         /// form1 control.

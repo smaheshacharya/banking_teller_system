@@ -4,8 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
 using FinalProject.controller;
+using System.Data;
 
 namespace FinalProject
 {
@@ -20,8 +20,9 @@ namespace FinalProject
         {
             string name = gusername.Text;
             string pass = gpassword.Text;
-            controllerclass con =new controllerclass();
-            con.general_signup(name, pass);
+            string add = address.Text;
+            controllerclass con = new controllerclass();
+            con.general_signup(name, pass, add);
         }
     }
 }
