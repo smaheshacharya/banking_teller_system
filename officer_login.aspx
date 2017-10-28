@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="FinalProject.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="officer_login.aspx.cs" Inherits="FinalProject.officer_login" %>
 
 <!DOCTYPE html>
 
@@ -13,8 +13,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-  
-   <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -57,7 +56,7 @@
                 <div class="row">
 <div class="col-lg-12 ">
             
-                    <h3>Customer Login:</h3>
+                    <h3>Admin Login:</h3>
                 </div>
             </div>
 
@@ -77,8 +76,8 @@
                     
          
                     <div class="form-group">
-                        <asp:Label ID="Label2" runat="server" Text="Account no:" CssClass="lable"></asp:Label>
-                        <asp:TextBox ID="cl_account_no" runat="server" CssClass="form-control form-horizontal" TextMode="Number"  ></asp:TextBox>
+                        <asp:Label ID="Label2" runat="server" Text="Password:" CssClass="lable"></asp:Label>
+                        <asp:TextBox ID="cpassword" runat="server" CssClass="form-control form-horizontal" TextMode="Password"  ></asp:TextBox>
                     </div>
                 
              
@@ -92,38 +91,11 @@
                                 <asp:Label ID="rel" runat="server" Text=""></asp:Label>
                     </div>
           </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h3>Account Detail:</h3>
-                            <hr />
-                        </div>
-                    </div>
-            <div class="row">
-                <div class="col-lg-12 ">
-
-                    <asp:GridView ID="cusinfo" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
-                        <AlternatingRowStyle BackColor="White" />
-                        <EditRowStyle BackColor="#2461BF" />
-                        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#EFF3FB" />
-                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
-                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
-                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
-                    </asp:GridView>
-                </div>
-
-            </div>
+            
         </div>
 
               </div>
 
-        
-             
-				   
     </form>
 </body>
 </html>

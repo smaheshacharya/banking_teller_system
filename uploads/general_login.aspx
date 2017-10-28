@@ -72,8 +72,8 @@
                     
                         
                          <asp:Button ID="Submit" runat="server"  CssClass="btn btn-info" Text="Login" OnClick="Submit_Click"  />
-                 <asp:Button ID="Button1" runat="server"  CssClass="btn btn-info" Text="Signup"   />
-                         <asp:Button ID="Sumbit" runat="server"  CssClass="btn btn-danger" Text="Exit" />
+              <asp:Button ID="Button1" runat="server"  CssClass="btn btn-info" Text="Signup" OnClick="Button1_Click"   />
+                         <asp:Button ID="Sumbit" runat="server"  CssClass="btn btn-danger" Text="Exit" style="width: 58px" />
                 </div>
              
           </div>

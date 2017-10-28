@@ -256,22 +256,22 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// supload control.
+        /// fileupload control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload supload;
+        protected global::System.Web.UI.WebControls.FileUpload fileupload;
         
         /// <summary>
-        /// Label10 control.
+        /// lbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
+        protected global::System.Web.UI.WebControls.Label lbl;
         
         /// <summary>
         /// Button1 control.

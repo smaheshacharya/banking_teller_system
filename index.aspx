@@ -44,9 +44,9 @@
             <li><a href="#">Deposite</a></li>
                <li role="separator" class="divider"></li>
               
-               <li><a href="services/deposite_cash">-Cash </a></li>
+               <li><a href="services/deposite_cash.aspx">-Cash </a></li>
                <li role="separator" class="divider"></li>
-               <li><a href="services/withdraw">Withdraw </a></li>
+               <li><a href="services/withdraw.aspx">Withdraw </a></li>
                <li><a href="services/loan.aspx">Loan </a></li>
               
            

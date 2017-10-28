@@ -10,7 +10,7 @@
 namespace FinalProject {
     
     
-    public partial class login {
+    public partial class officer_login {
         
         /// <summary>
         /// form1 control.
@@ -49,13 +49,13 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// cl_account_no control.
+        /// cpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox cl_account_no;
+        protected global::System.Web.UI.WebControls.TextBox cpassword;
         
         /// <summary>
         /// Submit control.
@@ -83,14 +83,5 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label rel;
-        
-        /// <summary>
-        /// cusinfo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView cusinfo;
     }
 }

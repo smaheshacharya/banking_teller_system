@@ -24,7 +24,10 @@ namespace FinalProject.services
             Decimal rate = Convert.ToDecimal(lrate.Text);
             Decimal time = Convert.ToDecimal(ltime.Text);
             controllerclass con = new controllerclass();
-            con.loan(acc, amm, name,rate,time);
+        
+                con.loan(acc, amm, name, rate, time);
+           
+           
 
         }
     }

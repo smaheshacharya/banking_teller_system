@@ -31,49 +31,22 @@ namespace FinalProject.services {
         protected global::System.Web.UI.WebControls.Label Lable1;
         
         /// <summary>
-        /// dcashaccount control.
+        /// dacc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dcashaccount;
+        protected global::System.Web.UI.WebControls.TextBox dacc;
         
         /// <summary>
-        /// Label3 control.
+        /// damm control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// dcashammount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dcashammount;
-        
-        /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
-        /// dcashammpuntindigit control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dcashammpuntindigit;
+        protected global::System.Web.UI.WebControls.TextBox damm;
         
         /// <summary>
         /// Label1 control.
@@ -85,13 +58,13 @@ namespace FinalProject.services {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// dcashdepositername control.
+        /// dname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox dcashdepositername;
+        protected global::System.Web.UI.WebControls.TextBox dname;
         
         /// <summary>
         /// Submit control.

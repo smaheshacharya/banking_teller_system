@@ -65,7 +65,7 @@
         </li>
       </ul>
       <div class="navbar-form navbar-right">
-       <a href="Login.aspx" class="btn btn-info"> <span>Login</span> </a>
+       <a href="../login.aspx" class="btn btn-info"> <span>Login</span> </a>
           
       </div>
      
@@ -206,9 +206,18 @@
                     <div class="form-group">
                         <asp:Label ID="Label9" runat="server" Text="Upload Scanned ID card:" CssClass="lable"></asp:Label>
                         
-                      <asp:FileUpload ID="supload" runat="server" Csslass="btn btn-default" Value="Upload" />
+                      <asp:FileUpload ID="fileupload" runat="server" Csslass="btn btn-default" Value="Upload" />
                    
-              <asp:Label ID="Label10" runat="server" Text=""></asp:Label>
+            
+                         </div>
+                </div>
+                    </div>
+                     <div class="row">
+          <div class="col-lg-6 col-lg-offset-4">
+          
+                    <div class="form-group">
+                        <asp:Label ID="lbl" runat="server" Text=""></asp:Label>
+            
                          </div>
                 </div>
                     </div>

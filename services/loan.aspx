@@ -41,7 +41,7 @@
                <li><a href="#">Add Account </a></li>
             <li><a href="#">Deposite</a></li>
                <li role="separator" class="divider"></li>
-               <li><a href="#">-Cheque </a></li>
+             
                <li><a href="#">-Cash </a></li>
                <li role="separator" class="divider"></li>
                <li><a href="#">Withdraw </a></li>
@@ -131,6 +131,13 @@
                         
                          <asp:Button ID="Submit" runat="server"  CssClass="btn btn-info" Text="Get loan" OnClick="Submit_Click" />
                          <asp:Button ID="Sumbit" runat="server"  CssClass="btn btn-danger" Text="Exit" Height="33px" style="margin-left: 29" Width="79px" />
+                </div>
+             
+          </div>
+                        <div class="row">
+           <div class="col-lg-6 col-lg-offset-4">
+                    
+               <asp:Label ID="rel_loan" runat="server" Text=""></asp:Label>
                 </div>
              
           </div>

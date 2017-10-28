@@ -76,26 +76,19 @@
              
                     <div class="form-group">
                         <asp:Label ID="Lable1" runat="server" Text="Acc No:" CssClass="lable"></asp:Label>
-                        <asp:TextBox ID="username" runat="server" CssClass="form-control form-horizontal" TextMode="Number"></asp:TextBox>
+                        <asp:TextBox ID="dacc" runat="server" CssClass="form-control form-horizontal" TextMode="Number"></asp:TextBox>
                     </div>
                 </div>
                     </div>
 
                            <div class="row">
-           <div class="col-lg-3 col-lg-offset-4">
+           <div class="col-lg-6 col-lg-offset-4">
          
                     <div class="form-group">
-                        <asp:Label ID="Label3" runat="server" Text="Ammount:" CssClass="lable"></asp:Label>
-                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control form-horizontal"   ></asp:TextBox>
+                        Ammount in digit:<asp:TextBox ID="damm" runat="server" CssClass="form-control form-horizontal"    ></asp:TextBox>
                     </div>
                 </div>
-           <div class="col-lg-3">
-         
-                    <div class="form-group">
-                        <asp:Label ID="Label4" runat="server" Text="Ammount in digit:" CssClass="lable"></asp:Label>
-                        <asp:TextBox ID="TextBox3" runat="server" CssClass="form-control form-horizontal" TextMode="Number"  ></asp:TextBox>
-                    </div>
-                </div>
+
                             </div>
                          
                   <div class="row">
@@ -103,7 +96,7 @@
              
                       <div class="form-group">
                         <asp:Label ID="Label1" runat="server" Text="Depositer Name:" CssClass="lable"></asp:Label>
-                        <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control form-horizontal" ></asp:TextBox>
+                        <asp:TextBox ID="dname" runat="server" CssClass="form-control form-horizontal" ></asp:TextBox>
                     </div>
                 
               </div>
@@ -112,7 +105,7 @@
            <div class="col-lg-6 col-lg-offset-4">
                     
                         
-                         <asp:Button ID="Submit" runat="server"  CssClass="btn btn-info" Text="Deposite" />
+                         <asp:Button ID="Submit" runat="server"  CssClass="btn btn-info" Text="Deposite" OnClick="Submit_Click" />
                          <asp:Button ID="Sumbit" runat="server"  CssClass="btn btn-danger" Text="Exit" />
                 </div>
              

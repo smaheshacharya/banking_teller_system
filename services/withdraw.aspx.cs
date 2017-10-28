@@ -39,7 +39,7 @@ namespace FinalProject.services
                con.withdraw(acc, name, ammdi);  //to insert withdraw ammount in withdraw table
                 Decimal decrease_amm = amm_retrive - ammdi;
                 con.update_deposite_cash(acc,decrease_amm);//for update in deposite table 
-            
+                result.Text ="";
 
             }
             else

@@ -12,6 +12,23 @@ namespace FinalProject.controller
 {
     public class controllerclass
     {
+        public void general_signup(string name, string password, string address)
+        {
+
+            try
+            {
+
+                DataBaseConnection.connectiondatabase();
+                string str = "insert into general_login(username,password,address)values('" + name + "'," + password + "','" + address + "')";
+                MySqlCommand con = new MySqlCommand(str, DataBaseConnection.cn);
+                con.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
         public void  delete_account(int acc)
         {
             string str="delete from addaccount where account_no='"+acc+"'";
@@ -19,6 +36,17 @@ namespace FinalProject.controller
             con.ExecuteNonQuery();
 
         }
+        public void deposite(int acc, Decimal amm, string name)
+        {
+            // insert data in withdraw table in database
+            DataBaseConnection.connectiondatabase();
+
+
+            string insertdata = "insert into deposite_cash (account_no,ammount_digit,depositer_name)values('" + acc + "','" + amm + "','" + name + "')";
+            MySqlCommand md = new MySqlCommand(insertdata, DataBaseConnection.cn);
+            md.ExecuteNonQuery();
+        }
+
         public void update_deposite_cash(Decimal acc ,Decimal amm)
         {
             DataBaseConnection.connectiondatabase();
@@ -26,6 +54,16 @@ namespace FinalProject.controller
             MySqlCommand con =new  MySqlCommand(str, DataBaseConnection.cn);
             con.ExecuteNonQuery();
 
+        }
+        public void withdraw(Decimal acc, string name, Decimal digit)
+        {
+            // insert data in withdraw table in database
+            DataBaseConnection.connectiondatabase();
+
+
+            string insertdata = "insert into withdraw (account_no,withdrawer_name,ammount_digit)values('" + acc + "','" + name + "','" + digit + "')";
+            MySqlCommand md = new MySqlCommand(insertdata, DataBaseConnection.cn);
+            md.ExecuteNonQuery();
         }
 
         public DataTable withdraw_ammount(Decimal acc)
@@ -37,16 +75,7 @@ namespace FinalProject.controller
             dt.Fill(ds, "login");
             return ds.Tables[0];
         }
-         public void withdraw(Decimal acc, string name, Decimal digit)
-         {
-             // insert data in withdraw table in database
-             DataBaseConnection.connectiondatabase();
-
-
-             string insertdata = "insert into withdraw (account_no,withdrawer_name,ammount_digit)values('" + acc + "','" + name + "','" + digit + "')";
-             MySqlCommand md = new MySqlCommand(insertdata, DataBaseConnection.cn);
-             md.ExecuteNonQuery();
-         }
+     
           public void loan(Decimal acc, Decimal ammount,String name, Decimal rate,Decimal time)
        {
            // insert data in loan table in database
@@ -92,23 +121,7 @@ namespace FinalProject.controller
             return ds.Tables[0];
 
         }
-        public void general_signup(string name,string password,string address)
-        {
 
-            try
-            {
-
-                DataBaseConnection.connectiondatabase();
-                string str = "insert into general_login(username,password,address)values('" + name + "'," + password + "','" + address + "')";
-                MySqlCommand con = new MySqlCommand(str, DataBaseConnection.cn);
-                con.ExecuteNonQuery();
-            }
-            catch(Exception ex)
-            {
-
-            }
-      
-        }
 
         public DataTable admin_login(string name, string pass)
         {
@@ -122,16 +135,28 @@ namespace FinalProject.controller
             
 
         }
-   
-     
-           public void add_account(string name, string email, int house_no, string vdc, string district, Decimal mobile_no, string gender, string usertype, string father_name, string grand_father, string wife, DateTime date)
+        public DataTable cusdetail()
+        { 
+          //select for customer login
+            DataBaseConnection.connectiondatabase();
+            string srt = "select account_no,username from addaccount";
+            MySqlDataAdapter dt = new MySqlDataAdapter(srt, DataBaseConnection.cn);
+            DataSet ds = new DataSet();
+            dt.Fill(ds, "login");
+            return ds.Tables[0];
+
+
+        }
+
+
+        public void add_account(string name, string email, int house_no, string vdc, string district, Decimal mobile_no, string gender, string usertype, string father_name, string grand_father, string wife,byte[] img, DateTime date)
         {
             //add account in database of costumer
             try
             {
                 DataBaseConnection.connectiondatabase();
 
-                string insertdata = "insert into addaccount(username,email,house_no,vdc,district,mobile,gender,usertype,father_name,grandfather_name,wife_name,date)values('" + name + "','" + email + "','" + house_no + "','" + vdc + "','" + district + "','" + mobile_no + "','" + gender + "','" + usertype + "','" + father_name + "','" + grand_father + "','" + wife + "','" + date + "')";
+                string insertdata = "insert into addaccount(username,email,house_no,vdc,district,mobile,gender,usertype,father_name,grandfather_name,wife_name,image,date)values('" + name + "','" + email + "','" + house_no + "','" + vdc + "','" + district + "','" + mobile_no + "','" + gender + "','" + usertype + "','" + father_name + "','" + grand_father + "','" + wife + "','" + img + "','" + date + "')";
                 MySqlCommand nm = new MySqlCommand(insertdata, DataBaseConnection.cn);
                 nm.ExecuteNonQuery();
             }
@@ -143,7 +168,7 @@ namespace FinalProject.controller
         public DataTable account_manipulation()
         {
             database_connection();
-            string str = "select account_no,username,email,house_no,vdc,district,mobile,gender,usertype,father_name,grandfather_name,wife_name from addaccount ";
+            string str = "select account_no,username,email,house_no,vdc,district,mobile,gender,usertype,father_name,grandfather_name,wife_name,image from addaccount ";
             MySqlDataAdapter da = new MySqlDataAdapter(str ,DataBaseConnection.cn);
             DataSet ds = new DataSet();
             da.Fill(ds, "log");
@@ -161,6 +186,16 @@ namespace FinalProject.controller
             con.ExecuteNonQuery();
 
         }
-        
+        public DataTable deposite_cash_add_with_tranjaction(int acc)
+        {
+            database_connection();
+            string str = "select ammount_digit from deposite_cash where acc='" + acc + "'";
+            MySqlDataAdapter da = new MySqlDataAdapter(str, DataBaseConnection.cn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "log");
+            return ds.Tables[0];
+        }
+    
+
     }
 }

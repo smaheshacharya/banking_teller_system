@@ -87,9 +87,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin_services\account_manipulation.aspx" />
-    <Content Include="general_login.aspx" />
+    <Content Include="uploads\general_login.aspx" />
     <Content Include="index.aspx" />
     <Content Include="indexuser.aspx" />
+    <Content Include="officer_login.aspx" />
     <Content Include="services\deposite_cash.aspx" />
     <Content Include="services\loan.aspx" />
     <Content Include="login.aspx" />
@@ -156,6 +157,7 @@
     <Content Include="src\js\owl.carousel.min.js" />
     <Content Include="src\js\parallax.min.js" />
     <Content Include="src\js\wow.min.js" />
+    <Content Include="uploads\photo1.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -167,11 +169,11 @@
       <DependentUpon>account_manipulation.aspx</DependentUpon>
     </Compile>
     <Compile Include="controller\controllerclass.cs" />
-    <Compile Include="general_login.aspx.cs">
+    <Compile Include="uploads\general_login.aspx.cs">
       <DependentUpon>general_login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="general_login.aspx.designer.cs">
+    <Compile Include="uploads\general_login.aspx.designer.cs">
       <DependentUpon>general_login.aspx</DependentUpon>
     </Compile>
     <Compile Include="helper\DataBaseConnection.cs" />
@@ -188,6 +190,13 @@
     </Compile>
     <Compile Include="indexuser.aspx.designer.cs">
       <DependentUpon>indexuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officer_login.aspx.cs">
+      <DependentUpon>officer_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officer_login.aspx.designer.cs">
+      <DependentUpon>officer_login.aspx</DependentUpon>
     </Compile>
     <Compile Include="services\deposite_cash.aspx.cs">
       <DependentUpon>deposite_cash.aspx</DependentUpon>

@@ -41,7 +41,6 @@
                <li><a href="#">Add Account </a></li>
             <li><a href="#">Deposite</a></li>
                <li role="separator" class="divider"></li>
-               <li><a href="#">-Cheque </a></li>
                <li><a href="#">-Cash </a></li>
                <li role="separator" class="divider"></li>
                <li><a href="#">Withdraw </a></li>

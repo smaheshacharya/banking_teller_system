@@ -8,7 +8,7 @@ using System.Data;
 using MySql.Data;
 using MySql.Data.MySqlClient;
 using FinalProject.controller;
-
+using System.IO;
 namespace FinalProject
 {
     public partial class signup : System.Web.UI.Page
@@ -32,7 +32,7 @@ namespace FinalProject
             string district = sdistrict.Text;
             Decimal mobile_no = Convert.ToDecimal(smobile.Text);
             string gender;
-            if(smale.Checked)
+            if (smale.Checked)
             {
                 gender = "male";
 
@@ -41,16 +41,34 @@ namespace FinalProject
             {
                 gender = "female";
             }
-            string usertype=sdrop.SelectedItem.Text;
+            string usertype = sdrop.SelectedItem.Text;
             string father_name = sfather.Text;
             string grand_father = sgrandfather.Text;
             string wife_name = swifename.Text;
             DateTime date = System.DateTime.Now;
-           
-            controllerclass con =new controllerclass();
-            con.add_account(username, email, house_no, vdc, district, mobile_no, gender, usertype, father_name, grand_father, wife_name,date);
-           
-          
+
+
+
+            if (fileupload.HasFile)
+            {
+
+
+
+                // fileupload.SaveAs(Server.MapPath("~/uploads/" + fileupload.FileName));//upload file in uploads folder
+                HttpPostedFile postfile = fileupload.PostedFile;
+                Stream stream = postfile.InputStream;
+                BinaryReader bin = new BinaryReader(stream);
+                byte[] byt = bin.ReadBytes((int)stream.Length);
+                controllerclass con = new controllerclass();
+                con.add_account(username, email, house_no, vdc, district, mobile_no, gender, usertype, father_name, grand_father, wife_name, byt, date);
+
+
+            }
+            else
+            {
+                add_account_result.Text = "file upload first";
+
+            }
         }
     }
 }

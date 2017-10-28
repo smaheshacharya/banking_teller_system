@@ -4,18 +4,15 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using MySql.Data;
-using MySql.Data.MySqlClient;
 using FinalProject.controller;
+using System.Data;
 
 namespace FinalProject
 {
-    public partial class login : System.Web.UI.Page
+    public partial class officer_login : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            grid();
 
         }
 
@@ -23,27 +20,17 @@ namespace FinalProject
         {
             controllerclass std = new controllerclass();
             string username = csusername.Text;
-            Decimal acc = Convert.ToDecimal(cl_account_no.Text);
-            DataTable lbl= std.customer_info(acc,username);
-            if(lbl.Rows.Count>0)
+            string pass = cpassword.Text;
+            DataTable lbl = std.admin_login( username,pass);
+            if (lbl.Rows.Count > 0)
             {
-                Response.Redirect("~/index.aspx");
+                Response.Redirect("admin_services/account_manipulation.aspx");
             }
             else
             {
                 rel.Text = "YOU ENTER WRONG ACCOUNT NO. OR USERNAME";
                 rel.ForeColor = System.Drawing.Color.Red;
             }
-
         }
-        public void grid()
-        {
-            controllerclass stu = new controllerclass();
-            DataTable dt = stu.cusdetail();
-            cusinfo.DataSource = dt;
-            cusinfo.DataBind();
-
-        }
-
     }
 }
