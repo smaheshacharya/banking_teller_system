@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=17.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\smaheshacharya\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -87,7 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin_services\account_manipulation.aspx" />
-    <Content Include="uploads\general_login.aspx" />
+    <Content Include="services\loan_deposite.aspx" />
+    <Content Include="general_login.aspx" />
     <Content Include="index.aspx" />
     <Content Include="indexuser.aspx" />
     <Content Include="officer_login.aspx" />
@@ -169,11 +174,18 @@
       <DependentUpon>account_manipulation.aspx</DependentUpon>
     </Compile>
     <Compile Include="controller\controllerclass.cs" />
-    <Compile Include="uploads\general_login.aspx.cs">
+    <Compile Include="services\loan_deposite.aspx.cs">
+      <DependentUpon>loan_deposite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services\loan_deposite.aspx.designer.cs">
+      <DependentUpon>loan_deposite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="general_login.aspx.cs">
       <DependentUpon>general_login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="uploads\general_login.aspx.designer.cs">
+    <Compile Include="general_login.aspx.designer.cs">
       <DependentUpon>general_login.aspx</DependentUpon>
     </Compile>
     <Compile Include="helper\DataBaseConnection.cs" />

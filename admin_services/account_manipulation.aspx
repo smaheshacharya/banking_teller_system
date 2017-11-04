@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="account_manipulation.aspx.cs" Inherits="FinalProject.admin_services.add_staff" %>
 
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -80,9 +82,11 @@
           
                     <div class="form-group">
                         <asp:Label ID="Lable1" runat="server" Text="Username:" CssClass="lable"></asp:Label>
-                        <asp:TextBox ID="amusername" runat="server" CssClass="form-control form-horizontal" ></asp:TextBox>
+                        <asp:TextBox ID="amusername" runat="server" CssClass="form-control form-horizontal" >type username</asp:TextBox>
                     </div>
                 </div>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
                     </div>
          <div class="row">
                  <div class="col-lg-6 col-lg-offset-4">
@@ -230,7 +234,11 @@
              <hr />
                    <div class="row">
           <div class="col-lg-12 ">
-          
+              <div class="col-lg-3 col-offset-6">
+           <asp:TextBox ID="search" runat="server" CssClass="form-control form-horizontal" ></asp:TextBox>
+                   <asp:Button ID="Button2" runat="server" CssClass="btn btn-info" Text="search" OnClick="Button2_Click1"/>
+                        
+              </div>
               <asp:GridView ID="amgrid" runat="server" AutoGenerateSelectButton="True" CssClass="table table-bordered table-condensed table-responsive " OnSelectedIndexChanged="amgrig_SelectedIndexChanged" CellPadding="4" ForeColor="#333333" GridLines="None">
                   <AlternatingRowStyle BackColor="White" />
                   <EditRowStyle BackColor="#2461BF" />

@@ -72,7 +72,7 @@ namespace FinalProject.admin_services
             int acc = Convert.ToInt16(label.Text);
             DataTable dt = con.loan_ammount(acc);
             Decimal a = 0;
-            string ammount = dt.Rows[0]["ammount_digit"].ToString();
+            string ammount = dt.Rows[0]["ammount_digit_with_interest"].ToString();
             Decimal amm = Convert.ToDecimal(ammount);
             if (amm > a)
 
@@ -82,8 +82,20 @@ namespace FinalProject.admin_services
             }
             else
             {
+               // con.loan_delete(acc);
                 con.delete_account(acc);
             }
+        }
+
+   
+
+        protected void Button2_Click1(object sender, EventArgs e)
+        {
+            string srch = search.Text;
+            controllerclass stu = new controllerclass();
+            DataTable dt = stu.search(srch);
+            amgrid.DataSource = dt;
+            amgrid.DataBind();
         }
     }
 

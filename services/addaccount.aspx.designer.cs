@@ -229,13 +229,13 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.TextBox sgrandfather;
         
         /// <summary>
-        /// Label8 control.
+        /// whname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label8;
+        protected global::System.Web.UI.WebControls.Label whname;
         
         /// <summary>
         /// swifename control.

@@ -35,11 +35,13 @@ namespace FinalProject
             if (smale.Checked)
             {
                 gender = "male";
+                whname.Text = "Wife name";
 
             }
             else
             {
                 gender = "female";
+                whname.Text = "Husband Name";
             }
             string usertype = sdrop.SelectedItem.Text;
             string father_name = sfather.Text;

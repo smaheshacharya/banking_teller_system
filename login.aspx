@@ -101,7 +101,7 @@
             <div class="row">
                 <div class="col-lg-12 ">
 
-                    <asp:GridView ID="cusinfo" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <asp:GridView ID="cusinfo" runat="server" CellPadding="4" ForeColor="#333333" CssClass="table table-bordered table-condensed" GridLines="None">
                         <AlternatingRowStyle BackColor="White" />
                         <EditRowStyle BackColor="#2461BF" />
                         <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />

@@ -195,7 +195,7 @@
           <div class="col-lg-6 col-lg-offset-4">
           
                     <div class="form-group">
-                        <asp:Label ID="Label8" runat="server" Text="Wife name:" CssClass="lable"></asp:Label>
+                        <asp:Label ID="whname" runat="server" Text="Wife/Husband name" CssClass="lable"></asp:Label>
                         <asp:TextBox ID="swifename" runat="server" CssClass="form-control form-horizontal" ></asp:TextBox>
                     </div>
                 </div>
